@@ -28,13 +28,16 @@
 }
 
 .button:hover,
-.button:focus-visible {
+.button:focus {
   outline: 1px solid #f86310;
   outline-offset: -1px;
 }
 
-@supports not selector(:focus-visible) {
+@supports selector(:focus-visible) {
   .button:focus {
+    outline: none;
+  }
+  .button:focus-visible {
     outline: 1px solid #f86310;
     outline-offset: -1px;
   }

@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #F2F2F3;
+  background: #f2f2f3;
   border-radius: 8px;
   padding: 7px 8px;
   font-weight: 400;
@@ -12,14 +12,16 @@
   line-height: 16px;
 }
 
-.count__minus {
+.minus {
   width: 8px;
 }
-
-.count__plus {
-  width: 8px;
+.minus:disabled {
+  cursor: default;
 }
 
+.plus {
+  width: 8px;
+}
 
 @media (min-width: 1024px) {
   .count {
@@ -31,11 +33,11 @@
     line-height: 22px;
   }
 
-  .count__minus {
+  .minus {
     width: 10px;
   }
 
-  .count__plus {
+  .plus {
     width: 10px;
   }
 }

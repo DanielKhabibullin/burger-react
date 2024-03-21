@@ -2,13 +2,13 @@
   padding: 4px;
   display: flex;
   flex-direction: column;
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 12px;
   min-height: 243px;
   position: relative;
 }
 
-.product__image {
+.image {
   width: 100%;
   height: 120px;
   object-fit: cover;
@@ -16,14 +16,14 @@
   margin-bottom: 10px;
 }
 
-.product__price {
+.price {
   font-weight: 600;
   font-size: 16px;
   line-height: 100%;
   margin-bottom: 4px;
 }
 
-.product__title {
+.title {
   font-weight: 400;
   font-size: 12px;
   line-height: 130%;
@@ -31,16 +31,16 @@
   margin-bottom: 4px;
 }
 
-.product__detail {
+.detail {
   outline: none;
 }
 
-.product__detail:focus-visible,
-.product__detail:hover {
-  color: #F86310;
+.detail:focus-visible,
+.detail:hover {
+  color: #f86310;
 }
 
-.product__detail:after {
+.detail:after {
   content: '';
   position: absolute;
   inset: 0;
@@ -49,44 +49,44 @@
   border-radius: 12px;
 }
 
-.product__detail:focus-visible:after {
-  outline-color: #F86310;
+.detail:focus-visible:after {
+  outline-color: #f86310;
 }
 
-.product__weight {
+.weight {
   font-weight: 600;
   font-size: 12px;
   line-height: 130%;
-  color: #B1B1B1;
+  color: #b1b1b1;
   margin-bottom: 7px;
 }
 
-.product__add {
-  background: #F2F2F3;
+.add {
+  background: #f2f2f3;
   border-radius: 8px;
   width: 100%;
   font-weight: 400;
   font-size: 12px;
   line-height: 100%;
   padding: 9px;
-  transition: transform .1s ease, background-color .3s ease-in-out;
+  transition: transform 0.1s ease, background-color 0.3s ease-in-out;
 }
 
-.product__add:hover {
-  background-color: #FFAB08;
+.add:hover {
+  background-color: #ffab08;
 }
 
-.product__add:focus-visible {
-  background-color: #F86310;
+.add:focus-visible {
+  background-color: #f86310;
 }
 
-.product__add:active {
-  transform: translate(1px, 2px)
+.add:active {
+  transform: translate(1px, 2px);
 }
 
-.product__add:disabled {
-  background-color: #F9F9F9;
-  color: #ACACAC;
+.add:disabled {
+  background-color: #f9f9f9;
+  color: #acacac;
 }
 
 @media (min-width: 1024px) {
@@ -96,27 +96,27 @@
     min-height: 411px;
   }
 
-  .product__image {
+  .image {
     height: 220px;
     border-radius: 12px;
     margin-bottom: 16px;
   }
 
-  .product__price {
+  .price {
     font-size: 24px;
     margin-bottom: 8px;
   }
 
-  .product__title {
+  .title {
     font-size: 16px;
   }
 
-  .product__weight {
+  .weight {
     font-size: 16px;
     margin-bottom: 8px;
   }
 
-  .product__add {
+  .add {
     border-radius: 12px;
     font-size: 16px;
     padding: 12px;
