@@ -1,33 +1,43 @@
+import { useDispatch } from 'react-redux';
+import { API_URI } from '../../const';
 import style from './CatalogProduct.module.css';
 import PropTypes from 'prop-types';
+import { addProduct } from '../../store/order/orderSlice';
 
-export const CatalogProduct = (props) => (
-  <article className={style.product}>
-    <img
-      src="img/photo-5.jpg"
-      alt={props.title}
-      className={style.image}
-    />
-
-    <p className={style.price}>
-      689<span className="currency">₽</span>
-    </p>
-
-    <h3 className={style.title}>
-      <button className={style.detail}>{props.title}</button>
-    </h3>
-
-    <p className={style.weight}>520г</p>
-
-    <button
-      className={style.add}
-      type="button"
-    >
-      Добавить
-    </button>
-  </article>
-);
+export const CatalogProduct = ({ item }) => {
+  const dispatch = useDispatch();
+  return (
+    <article className={style.product}>
+      <img
+        src={`${API_URI}/${item.image}`}
+        alt={item.title}
+        className={style.image}
+      />
+      <p className={style.price}>
+        {item.price}
+        <span className="currency">₽</span>
+      </p>
+      <h3 className={style.title}>
+        <button className={style.detail}>{item.title}</button>
+      </h3>
+      <p className={style.weight}>{item.weight}г</p>
+      <button
+        className={style.add}
+        type="button"
+        onClick={() => dispatch(addProduct({ id: item.id }))}
+      >
+        Добавить
+      </button>
+    </article>
+  );
+};
 
 CatalogProduct.propTypes = {
-  title: PropTypes.string,
+  item: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    weight: PropTypes.number.isRequired,
+    id: PropTypes.string.isRequired,
+  }).isRequired,
 };
