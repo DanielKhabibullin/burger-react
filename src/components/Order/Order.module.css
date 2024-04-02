@@ -81,13 +81,20 @@
 .submit {
   width: 100%;
   padding: 9px;
-  background: #ff7020;
+  background-color: #ff7020;
   border-radius: 8px;
   font-weight: 400;
   font-size: 12px;
   line-height: 100%;
   color: #ffffff;
   margin-bottom: 8px;
+}
+
+.submit:disabled {
+  background-color: #bfbfc0;
+  color: #000;
+  opacity: 0.5;
+  cursor: no-drop;
 }
 
 .apeal {

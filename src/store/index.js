@@ -1,6 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 import categoryReducer from './category/categorySlice';
 import productReducer from './product/productSlice';
+import modalReducer from './modalDelivery/modalDeliverySlice';
 import orderReducer, { localStorageMiddleware } from './order/orderSlice';
 
 export const store = configureStore({
@@ -8,6 +9,7 @@ export const store = configureStore({
     category: categoryReducer,
     product: productReducer,
     order: orderReducer,
+    modal: modalReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(localStorageMiddleware),
