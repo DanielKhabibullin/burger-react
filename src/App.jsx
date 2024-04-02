@@ -3,6 +3,7 @@ import { Catalog } from './components/Catalog/Catalog';
 import { Header } from './components/Header/Header';
 import { Navigation } from './components/Navigation/Navigation';
 import { store } from './store';
+import { Footer } from './components/Footer/Footer';
 
 export const App = () => {
   return (
@@ -12,7 +13,7 @@ export const App = () => {
         <Navigation />
         <Catalog />
       </main>
-      <footer></footer>
+      <Footer />
     </Provider>
   );
 };

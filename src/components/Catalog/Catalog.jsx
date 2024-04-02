@@ -22,8 +22,7 @@ export const Catalog = () => {
         <Order />
         <div className={style.wrapper}>
           <h2 className={style.title}>{category[activeCategory]?.rus}</h2>
-
-          <div className={style.wrap_list}>
+          {products.length ? (
             <ul className={style.list}>
               {products.map((item) => (
                 <li
@@ -34,7 +33,11 @@ export const Catalog = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          ) : (
+            <p className={style.not_found}>
+              К сожалению, товаров данной категории нет
+            </p>
+          )}
         </div>
       </Container>
     </section>

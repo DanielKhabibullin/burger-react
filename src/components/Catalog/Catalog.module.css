@@ -19,6 +19,10 @@
   grid-template-columns: repeat(auto-fit, 145px);
   gap: 10px;
 }
+.not_found {
+  font-size: 1.4em;
+  color: tomato;
+}
 
 @media (min-width: 1024px) {
   .catalog {
