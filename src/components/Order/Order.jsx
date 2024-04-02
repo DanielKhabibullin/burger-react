@@ -12,7 +12,7 @@ export const Order = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(orderRequestAsync());
-  }, [orderList.length]);
+  }, [dispatch, orderList.length]);
   return (
     <div className={style.order}>
       <section className={style.wrapper}>
