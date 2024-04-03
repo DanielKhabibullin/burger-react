@@ -5,6 +5,7 @@
   cursor: pointer;
   overflow-y: auto;
   display: flex;
+  z-index: 10;
 }
 
 .modal__close {
@@ -173,6 +174,14 @@
 .submit:disabled {
   background-color: #f9f9f9;
   color: #acacac;
+}
+.errorWrapper {
+  display: block;
+  margin: 12px auto 0;
+}
+.error {
+  padding: 5px 0 0 0;
+  color: tomato;
 }
 
 @supports not selector(:focus-visible) {
