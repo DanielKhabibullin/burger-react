@@ -1,0 +1,40 @@
+.goods {
+  flex-grow: 1;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.image {
+  width: 64px;
+  height: 52px;
+  border-radius: 8px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 0;
+  border-bottom: 1px solid #f2f2f3;
+}
+
+.item:first-child {
+  border-top: 1px solid #f2f2f3;
+}
+
+.title {
+  font-weight: 400;
+  margin-bottom: 1px;
+}
+
+.weight {
+  color: #b1b1b1;
+  margin-bottom: 6px;
+}
+
+@media (min-width: 1024px) {
+  .item {
+    padding: 15px 0;
+  }
+}
