@@ -12,6 +12,9 @@ export const Order = () => {
   );
   const dispatch = useDispatch();
   const [openOrder, setOpenOrder] = useState(false);
+  const handlerOpen = () => {
+    setOpenOrder(!openOrder);
+  };
   useEffect(() => {
     dispatch(orderRequestAsync());
   }, [dispatch, orderList.length]);
@@ -22,7 +25,7 @@ export const Order = () => {
           className={style.header}
           tabIndex="0"
           role="button"
-          onClick={() => setOpenOrder((prev) => !prev)}
+          onClick={handlerOpen}
         >
           <h2 className={style.title}>Корзина</h2>
 
@@ -57,7 +60,12 @@ export const Order = () => {
 
           <div className={style.apeal}>
             <p className={style.text}>Бесплатная доставка</p>
-            <button className={style.close}>Свернуть</button>
+            <button
+              className={style.close}
+              onClick={handlerOpen}
+            >
+              Свернуть
+            </button>
           </div>
         </div>
       </section>

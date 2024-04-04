@@ -7,7 +7,7 @@ import { useEffect } from 'react';
 import { productRequestAsync } from '../../store/product/productSlice';
 
 export const Catalog = () => {
-  const { products, flag } = useSelector((state) => state.product);
+  const { products, flagProduct } = useSelector((state) => state.product);
   const dispatch = useDispatch();
   const { category, activeCategory } = useSelector((state) => state.category);
 
@@ -34,7 +34,7 @@ export const Catalog = () => {
               ))}
             </ul>
           ) : (
-            flag && (
+            flagProduct && (
               <p className={style.not_found}>
                 К сожалению, товаров данной категории нет
               </p>

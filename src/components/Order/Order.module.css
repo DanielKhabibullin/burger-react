@@ -11,7 +11,7 @@
   background: #ffffff;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.16);
   border-radius: 12px;
-  padding: 16px 10px;
+  /* padding: 16px 10px; */
 }
 
 .header {
@@ -19,6 +19,7 @@
   justify-content: space-between;
   align-items: center;
   outline: none;
+  padding: 16px;
 }
 
 .header:after {
@@ -59,6 +60,7 @@
 
 .wrap_list {
   display: none;
+  padding: 0 16px 10px;
 }
 
 .order_open .wrap_list {

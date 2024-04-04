@@ -3,7 +3,7 @@ import { API_URI, POSTFIX } from '../../const';
 
 const initialState = {
   products: [],
-  flag: false,
+  flagProduct: false,
   error: '',
 };
 
@@ -22,12 +22,12 @@ const productSlice = createSlice({
     builder
       .addCase(productRequestAsync.pending, (state) => {
         state.error = '';
-        state.flag = false;
+        state.flagProduct = false;
       })
       .addCase(productRequestAsync.fulfilled, (state, action) => {
         state.error = '';
         state.products = action.payload;
-        state.flag = true;
+        state.flagProduct = true;
       })
       .addCase(productRequestAsync.rejected, (state, action) => {
         state.error = action.payload.error;
