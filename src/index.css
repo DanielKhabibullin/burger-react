@@ -4,7 +4,8 @@
   font-weight: 400;
   font-display: swap;
   src: local(''),
-    url('./assets/fonts/nunito-v25-latin_cyrillic-regular.woff2') format('woff2'),
+    url('./assets/fonts/nunito-v25-latin_cyrillic-regular.woff2')
+      format('woff2'),
     url('./assets/fonts/nunito-v25-latin_cyrillic-regular.woff') format('woff');
 }
 
@@ -44,7 +45,7 @@ body {
   font-family: Nunito, sans-serif;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #F9F9F9;
+  background-color: #f9f9f9;
   color: #000000;
   position: relative;
   overflow-x: hidden;
@@ -94,8 +95,6 @@ fieldset {
   position: fixed;
   transform: scale(0);
 }
-
-
 
 .currency {
   font-weight: 400;

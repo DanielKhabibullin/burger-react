@@ -11,7 +11,7 @@ import {
 } from '../../store/form/formSlice';
 
 export const ModalDelivery = () => {
-  const { isOpen } = useSelector((state) => state.modal);
+  const { isOpen } = useSelector((state) => state.modalDelivery);
   const form = useSelector((state) => state.form);
   const dispatch = useDispatch();
   const { orderList } = useSelector((state) => state.order);
